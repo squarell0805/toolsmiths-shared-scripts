@@ -1,14 +1,14 @@
 <%
-  region = ENV.fetch('ENV_REGION', 'us-central1')
+  region = ENV.fetch('ENV_REGION', 'us-west1')
   tries = ENV.fetch('TRIES', 0).to_i
   case region
-  	when 'us-central1'
-      zones = ['us-central1-b', 'us-central1-f', 'us-central1-c']
-  	when 'europe-west1'
+    when 'us-west1'
+      zones = ['us-west1-a', 'us-west1-b', 'us-west1-c']
+    when 'europe-west1'
       zones = ['europe-west1-b', 'europe-west1-c', 'europe-west1-d']
-  	else
+    else
       raise "Unsupported region '#{region}'"
-   end
+  end
 %>
 
 env_name = "<%= ENV.fetch('ENV_NAME') %>"

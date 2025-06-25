@@ -4,33 +4,46 @@
 
 {
   "backup_restore": {
-    "instances": 0
+    "instances": 0,
+    "internet_connected": false
   },
   "mysql_monitor": {
-    "instances": 0
+    "instances": 0,
+    "internet_connected": false
   },
   "router": {
     "instances": 1,
+    "internet_connected": false,
     "elb_names": [
       "tcp:<%= ws_router %>"
     ]
   },
   "control": {
     "instances": 1,
+    "internet_connected": false,
     "elb_names": [
       "tcp:<%= ssh_router %>"
     ]
   },
   "compute": {
     "instances": 1,
+    "internet_connected": false,
     "instance_type": {
       "id": "toolsmiths.n1-highmem-2.128"
     }
   },
   "blobstore": {
     "instances": 1,
+    "internet_connected": false,
     "instance_type": {
       "id": "toolsmiths.medium-disk-2-4.32"
     }
+  },
+  "database" : {
+    "internet_connected": false
+  },
+  "tcp_router": {
+    "instances": 0,
+    "internet_connected": false
   }
 }
