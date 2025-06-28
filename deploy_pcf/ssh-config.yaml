@@ -1,0 +1,7 @@
+#cloud-config
+runcmd:
+  - echo "Starting SSH configuration"
+  - echo "Port 22" >> /etc/ssh/sshd_config
+  - echo "Port 8022" >> /etc/ssh/sshd_config
+  - systemctl restart ssh.service
+  - echo "SSH port changed to 8022"

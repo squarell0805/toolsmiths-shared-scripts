@@ -42,6 +42,7 @@ resource "google_compute_instance" "ops-manager" {
   metadata = {
     ssh-keys               = "${format("ubuntu:%s", tls_private_key.ops-manager.public_key_openssh)}"
     block-project-ssh-keys = "TRUE"
+    user-data              = "${file("${path.module}/ssh-config.yaml")}"
   }
 }
 
