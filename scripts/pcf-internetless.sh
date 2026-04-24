@@ -64,7 +64,7 @@ gcloud compute firewall-rules create "${env_name}-internetless-egress-deny" \
 gcloud compute firewall-rules create "${env_name}-internetless-dns-egress" \
        --network="${env_name}-pcf-network"     \
        --direction=egress \
-       --destination-ranges=8.8.8.8 \
+       --destination-ranges=169.254.169.254 \
        --action=allow \
        --rules=all \
        --priority=4

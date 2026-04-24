@@ -10,7 +10,7 @@ Description:
 Ops Manager and Bosh Director granted access to all internet addresses
 
 <env>-internetless-dns-egress
-All VMs can use the 8.8.8.8 DNS server
+All VMs can use the 169.254.169.254 DNS server
 
 <env>-internetless-intra-pcf-vm-egress-allow
 All VMs can see each other’s private IP addresses & the loadbalancers
